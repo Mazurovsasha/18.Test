@@ -1,0 +1,49 @@
+Ansible lint
+
+Установка:
+
+```bash
+sudo pip3 install ansible-lint
+```
+
+Проверяем:
+
+ansible-lint <file name>
+
+
+
+
+
+Kubeval
+
+Установка: [https://www.kubeval.com/installation/]
+
+```bash
+wget https://github.com/instrumenta/kubeval/releases/latest/download/kubeval-linux-amd64.tar.gz
+tar xf kubeval-linux-amd64.tar.gz
+sudo cp kubeval /usr/local/bin
+```
+
+Тест файла:
+
+```
+kubeval jenkins.yaml
+```
+
+
+
+
+Kube-linter
+
+Установка: [https://docs.kubelinter.io/#/] or [https://github.com/stackrox/kube-linter]
+
+```
+wget https://github.com/stackrox/kube-linter/releases/download/v0.6.5/kube-linter-linux.tar.gz
+sudo tar -C /usr/local/bin -xzf kube-linter-linux.tar.gz
+```
+
+Тест:
+
+```
+kube-linter lint jenkins.yaml
+```
