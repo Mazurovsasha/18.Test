@@ -12,7 +12,7 @@ USER sasha
 COPY requirements.txt . 
 
 # Установите зависимости
-RUN pip install -r requirements.txt -H
+RUN pip install Flask==2.1.3
 
 # Скопируйте файлы приложения в рабочую директорию
 COPY . .
