@@ -6,9 +6,6 @@ WORKDIR /app
 
 RUN groupadd -r sasha && useradd -r -g sasha sasha
 
-# Скопируйте зависимости в рабочую директорию
-# COPY requirements.txt . 
-
 # Установите зависимости
 RUN pip install Flask==2.1.3
 
