@@ -20,6 +20,7 @@ jobs:
 
     - name: Test by requesting data from imager
       run: |
+        docker ps
         curl http://localhost:5000
               
     - name: Test if image has not root access inside
