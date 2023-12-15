@@ -9,10 +9,10 @@ RUN groupadd -r sasha && useradd -r -g sasha sasha
 USER sasha
 
 # Скопируйте зависимости в рабочую директорию
-COPY requirements.txt .
+COPY requirements.txt . 
 
 # Установите зависимости
-RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt -H
 
 # Скопируйте файлы приложения в рабочую директорию
 COPY . .
