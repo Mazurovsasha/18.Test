@@ -15,7 +15,7 @@ jobs:
 
     - name: Build and deploy Docker image
       run: |
-        docker build -t test-image .
+        docker build -t test-image ./app
         docker run -d --name test-container test-image
 
     - name: Test by requesting data from imager
