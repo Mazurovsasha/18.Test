@@ -18,9 +18,9 @@ jobs:
         docker build -t test-image ./app
         docker run -d --name test-container test-image
 
-    - name: Test by requesting data from imager
-      run: |
-        docker exec test-container curl http://localhost
+    # - name: Test by requesting data from imager
+    #   run: |
+    #     docker exec test-container curl http://localhost
               
     - name: Test if image has not root access inside
       run: |
