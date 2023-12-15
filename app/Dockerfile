@@ -6,16 +6,16 @@ WORKDIR /app
 
 RUN groupadd -r sasha && useradd -r -g sasha sasha
 
-USER sasha
-
 # Скопируйте зависимости в рабочую директорию
-COPY requirements.txt . 
+# COPY requirements.txt . 
 
 # Установите зависимости
 RUN pip install Flask==2.1.3
 
 # Скопируйте файлы приложения в рабочую директорию
 COPY . .
+
+USER sasha
 
 # Укажите порт, на котором запускается приложение
 EXPOSE 5000
