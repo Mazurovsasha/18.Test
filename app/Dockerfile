@@ -7,7 +7,7 @@ WORKDIR /app
 RUN groupadd -r sasha && useradd -r -g sasha sasha
 
 # Установите зависимости
-RUN pip install Flask==2.1.3 && apt install curl
+RUN pip install Flask==2.1.3 && apt install -y curl
 
 # Скопируйте файлы приложения в рабочую директорию
 COPY . .

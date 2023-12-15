@@ -16,11 +16,11 @@ jobs:
     - name: Build and deploy Docker image
       run: |
         docker build -t test-image ./app
-        docker run -d --name test-container test-image
+        docker run -d --name test-container -p 5000:5000 test-image
 
     - name: Test by requesting data from imager
       run: |
-        docker exec test-container curl http://localhost:5000
+        curl http://localhost:5000
               
     - name: Test if image has not root access inside
       run: |
