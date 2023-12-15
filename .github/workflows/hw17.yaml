@@ -20,7 +20,7 @@ jobs:
 
     - name: Test by requesting data from imager
       run: |
-        docker exec test-container ping -c3 http://localhost:5000
+        docker exec test-container curl http://localhost:5000
               
     - name: Test if image has not root access inside
       run: |
