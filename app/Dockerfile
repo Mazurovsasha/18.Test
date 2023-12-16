@@ -6,6 +6,8 @@ WORKDIR /app
 
 RUN groupadd -r sasha && useradd -r -g sasha sasha
 
+USER sasha
+
 # Скопируйте зависимости в рабочую директорию
 COPY requirements.txt requirements.txt
 
