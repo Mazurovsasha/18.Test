@@ -6,8 +6,6 @@ WORKDIR /app
 
 RUN groupadd -r sasha && useradd -r -g sasha sasha
 
-USER sasha
-
 # Скопируйте зависимости в рабочую директорию
 COPY requirements.txt requirements.txt
 
@@ -19,6 +17,8 @@ COPY . .
 
 # Укажите порт, на котором запускается приложение
 EXPOSE 5000
+
+USER sasha
 
 # Задайте команду, которая будет выполняться при запуске контейнера
 CMD ["python", "app.py"]
