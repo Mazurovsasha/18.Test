@@ -4,6 +4,8 @@ FROM python:3.9
 # Установите текущую рабочую директорию
 WORKDIR /app
 
+RUN groupadd -r sasha && useradd -r -g sasha sasha
+
 # Скопируйте зависимости в рабочую директорию
 COPY requirements.txt requirements.txt
 

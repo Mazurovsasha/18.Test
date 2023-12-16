@@ -28,9 +28,7 @@ sudo cp kubeval /usr/local/bin
 
 ```
 kubeval jenkins.yaml
-```
-
-
+``` 
 
 
 Kube-linter
