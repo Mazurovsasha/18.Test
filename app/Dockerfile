@@ -4,12 +4,11 @@ FROM python:3.9
 # Установите текущую рабочую директорию
 WORKDIR /app
 
-RUN groupadd -r sasha && useradd -r -g sasha sasha 
+# Скопируйте зависимости в рабочую директорию
+COPY requirements.txt requirements.txt
 
 # Установите зависимости
-RUN pip install Flask==2.1.3 && apt install -y curl
-
-USER sasha
+RUN pip install -r requirements.txt
 
 # Скопируйте файлы приложения в рабочую директорию
 COPY . .
