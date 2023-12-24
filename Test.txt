@@ -40,8 +40,9 @@ wget https://github.com/stackrox/kube-linter/releases/download/v0.6.5/kube-linte
 sudo tar -C /usr/local/bin -xzf kube-linter-linux.tar.gz
 ```
 
-Тест:
+Test:
 
 ```
 kube-linter lint jenkins.yaml
 ```
+
